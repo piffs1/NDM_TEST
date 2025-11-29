@@ -12,6 +12,9 @@
 #include <string>
 #include <algorithm>
 #include <ctime>
+#include <chrono>
+#include <iomanip>
+#include <ctime>
 
 EpollServer::EpollServer(int port) : server_fd(-1), epoll_fd(-1), total_clients(0) {
 
@@ -184,14 +187,11 @@ void EpollServer::handle_client_data(int client_fd, uint32_t events) {
 /* функция получения текущего времени */
 std::string EpollServer::get_time()
 {
-    std::time_t now = std::time(nullptr);
-    std::string time_str = std::ctime(&now);
-        
-    if (!time_str.empty() && time_str[time_str.length()-1] == '\n') {
-        time_str.erase(time_str.length()-1);
-    }
-    
-    return time_str;
+    std::time_t t = std::time(nullptr);
+    char buffer[20];
+    std::strftime(buffer, sizeof(buffer), "%Y-%m-%d %H:%M:%S", std::localtime(&t));
+
+    return std::string(buffer);
 }
 /*обработка команды сервером. Нужно ли обрабатывать unknown command? В задании не указано :)*/
 std::string EpollServer::processCommand(const std::string a_msg) 
