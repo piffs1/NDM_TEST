@@ -59,7 +59,8 @@ Server: Welcome to server. Start typing...
   <img width="733" height="45" alt="Pasted image 20251129134554" src="https://github.com/user-attachments/assets/8228f578-94bd-4458-aa57-54d63add4e1e" />
   - **Total clients** - всего подключенных клиентов
   - **Active clients** - активных клиентов сейчас
-- ***/time*** - возвращает текущее время <img width="733" height="48" alt="Pasted image 20251129134717" src="https://github.com/user-attachments/assets/8d10d868-5aea-4852-8604-26b69d1de3c1" />
+- ***/time*** - возвращает текущее время <img width="735" height="47" alt="image" src="https://github.com/user-attachments/assets/f8c6f981-5aa5-49f7-ab21-aa07baa23f5f" />
+
 
 - ***/shutdown*** - завершает работу сервера, закрываются все активные соединения сервером<img width="723" height="134" alt="Pasted image 20251129134817" src="https://github.com/user-attachments/assets/ccbbaaff-ef32-4471-bae1-eaae3678a644" />
 
