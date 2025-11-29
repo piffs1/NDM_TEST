@@ -65,4 +65,7 @@ Server: Welcome to server. Start typing...
 
 Для выхода отправить `exit` или по классике `CTRL + C`
 
-
+### Для очистки проекта
+```shell
+make clean
+```
